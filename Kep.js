@@ -16,6 +16,8 @@ export class Kep {
         this.szuloElem = szuloElem;
         this.kepMegjelenit();
     }
+    
+
 
     kepMegjelenit() {
         let html = `
