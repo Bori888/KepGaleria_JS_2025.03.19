@@ -29,6 +29,6 @@ export class Kep {
                     <h3>${this.#leiras}</h3>
                 </div>
         `
-        this.szuloElem.inserAdjecentHTML("beforeend",html)
+        this.szuloElem.innerHtml =html;
     }
 }

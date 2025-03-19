@@ -10,11 +10,11 @@ megjelenit
 export class Kep {
   #cim;
   #leiras;
-  #url;
+  #src;
   constructor(kep, cim, szuloElem) {
     this.#cim = cim;
     this.#leiras = leiras;
-    this.#url = url;
+    this.#src = src;
     this.szuloElem = szuloElem;
     this.kepMegjelenit();
     this.esemenykezelo();
@@ -30,7 +30,7 @@ export class Kep {
   kepMegjelenit() {
     let html = `
                 <div class="kep">
-                    <img src="${this.#url}" alt="">
+                    <img src="${this.#src}" alt="">
                 </div>
         `;
     this.szuloElem.inserAdjecentHTML("beforeend", html);

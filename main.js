@@ -1,19 +1,10 @@
 import { KEPEK } from "./Kepek.js";
-import { Kep } from "./Kep.js";
-import { Nagykep } from "./nagyKep.js";
 import { OBJLISTA } from "./tomb.js";
+import LeptetoKezelo from "./LeptetesKezelo.js";
 
 
-const szuloElem = document.getElementsByClassName(".galeria")[0];
-const nkep = document.getElementsByClassName(".kiemelt")[0];
+let szuloElem = document.getElementsByClassName(".galeria")[0];
+const KEPEK = new KEPEK(OBJLISTA, szuloElem);
 
-const NagyKep =new NagyKep(
-    OBJLISTA[0].cim,
-    OBJLISTA[0].src,
-    OBJLISTA[0].leiras,
-    nkep
-
-
-);
-
-const KEPEK =new KEPEK(OBJLISTA,szuloElem)
+let nkep = document.getElementsByClassName(".kiemelt")[0];
+new LeptetoKezelo(OBJLISTA, nkep);
