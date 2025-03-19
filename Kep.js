@@ -8,24 +8,31 @@ megjelenit
 */
 
 export class Kep {
-    #kep;
-    #cim;
-    constructor(kep, cim, szuloElem) {
-        this.#cim = cim;
-        this.#kep = kep;
-        this.szuloElem = szuloElem;
-        this.kepMegjelenit();
-    }
-    
+  #cim;
+  #leiras;
+  #url;
+  constructor(kep, cim, szuloElem) {
+    this.#cim = cim;
+    this.#leiras = leiras;
+    this.#url = url;
+    this.szuloElem = szuloElem;
+    this.kepMegjelenit();
+    this.esemenykezelo();
+  }
+  esemenykezelo() {
+    this.kepElem = document.querySelector(".kep:last-child");
+    console.log(this.kepElem);
+    this.kepElem.addEventListener("click", function () {
+      console.log(this);
+    });
+  }
 
-
-    kepMegjelenit() {
-        let html = `
+  kepMegjelenit() {
+    let html = `
                 <div class="kep">
-                    <img src="${this.#kep}" alt="${this.#cim}">
-                    <h3>${this.#cim}</h3>
+                    <img src="${this.#url}" alt="">
                 </div>
-        `
-        this.szuloElem.innerHTML += html;
-    }
+        `;
+    this.szuloElem.inserAdjecentHTML("beforeend", html);
+  }
 }

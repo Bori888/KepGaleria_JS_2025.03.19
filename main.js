@@ -1,12 +1,19 @@
-import { KEPEK } from "./adat.js";
+import { KEPEK } from "./Kepek.js";
 import { Kep } from "./Kep.js";
+import { Nagykep } from "./nagyKep.js";
+import { OBJLISTA } from "./tomb.js";
 
-const GALERIAELEM = document.querySelectorAll(".galeria")[0];
-const NAGYKEPELEM = document.querySelectorAll(".kiemelt")[0];
 
-const MAGYKEP = new Kep(KEPEK[0].kep, KEPEK[0].cim, GALERIAELEM);
+const szuloElem = document.getElementsByClassName(".galeria")[0];
+const nkep = document.getElementsByClassName(".kiemelt")[0];
 
-/* e helyett kellene egy Kepek osztály,
-ami egy ciklussal végigmegy a listán */
+const NagyKep =new NagyKep(
+    OBJLISTA[0].cim,
+    OBJLISTA[0].src,
+    OBJLISTA[0].leiras,
+    nkep
 
-const GALERIAKEPEK = new Kepek(KEPEK, GALERIAELEM);
+
+);
+
+const KEPEK =new KEPEK(OBJLISTA,szuloElem)
