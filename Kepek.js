@@ -1,4 +1,7 @@
-export class Kepek {
+import { Kep } from "./Kep.js";
+
+
+export default class Kepek {
     #lista
     constructor(lista, szuloElem) {
         this.#lista = lista;
@@ -8,10 +11,13 @@ export class Kepek {
     
     megjelenit() {
         for (let index = 0; index < this.#lista.length; index++) {
-            const GALERIAKEP = new Kep(
-                this.#lista[index].kep,
-                this.kep[index].cim,
-                this.szuloElem);
+            const KEP = new Kep(
+                index,
+                this.#lista[index].cim,
+                this.#lista[index].src,
+                null,
+                this.szuloElem
+            );
         }
     }
 }

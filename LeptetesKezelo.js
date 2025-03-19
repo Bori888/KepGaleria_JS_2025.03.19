@@ -20,7 +20,7 @@ export default class LeptetoKezelo{
 
 
     }
-    esemenykezelo(){
+    esemenykezelo(){/*balra léptetés hf */
         this.jobbGombElem.addEventListener("click",()=> {
             this.aktIndex++;
             this.aktIndex= this.aktIndex % this.#lista.lengh;//ezzel áltjuk vissza 0 ra 

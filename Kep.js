@@ -1,18 +1,12 @@
-/* hozd létre a Kep osztályt
-adattagok:
-kep, cim, szuloElem
 
-tagfüggvények:
-
-megjelenit
-*/
-
-export class Kep {
+export default class Kep {
   #cim;
   #leiras;
   #src;
-  constructor(kep, cim, szuloElem) {
+  #index;/*privalt adattag */
+  constructor(index,leiras,src, cim, szuloElem) {
     this.#cim = cim;
+    this.#index = index;
     this.#leiras = leiras;
     this.#src = src;
     this.szuloElem = szuloElem;
@@ -21,9 +15,10 @@ export class Kep {
   }
   esemenykezelo() {
     this.kepElem = document.querySelector(".kep:last-child");
-    console.log(this.kepElem);
-    this.kepElem.addEventListener("click", function () {
-      console.log(this);
+    this.kepElem.addEventListener("click", ()=>  {//nyilt fv jele
+      console.log(this.index);
+      const e =new CustomEvent("kivalaszt", {detail:this.#index})//uj fv hozok létre
+      window.dispatchEvent(e)
     });
   }
 

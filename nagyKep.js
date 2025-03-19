@@ -1,11 +1,3 @@
-/* hozd létre a Kep osztályt
-adattagok:
-kep, cim, szuloElem
-
-tagfüggvények:
-
-megjelenit
-*/
 
 export class Kep {
     
