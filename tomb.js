@@ -1,3 +1,37 @@
-export const OBJLISTA[
-    {},
+export const OBJLISTA=[
+    {
+        cim:"Virag1",
+        src:"kepek/1.jpeg",
+        leiras:"virag",
+    },
+    {
+        cim:"Virag2",
+        src:"kepek/2.jpeg",
+        leiras:"virag",
+    },
+    {
+        cim:"Virag3",
+        src:"kepek/3.jpeg",
+        leiras:"virag",
+    },
+    {
+        cim:"Virag4",
+        src:"kepek/4.jpeg",
+        leiras:"virag",
+    },
+    {
+        cim:"Virag5",
+        src:"kepek/5.jpeg",
+        leiras:"virag",
+    },
+    {
+        cim:"Virag6",
+        src:"kepek/6.jpeg",
+        leiras:"virag",
+    },
+    {
+        cim:"Virag7",
+        src:"kepek/7.jpeg",
+        leiras:"virag",
+    },
 ]
