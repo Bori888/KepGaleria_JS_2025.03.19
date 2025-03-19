@@ -1,9 +1,10 @@
-import { Kep } from "./Kep.js";
+import  Kep  from "./Kep.js";
 
 
 export default class Kepek {
     #lista
     constructor(lista, szuloElem) {
+        console.log(szuloElem)
         this.#lista = lista;
         this.szuloElem = szuloElem;
         this.megjelenit();

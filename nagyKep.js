@@ -1,26 +1,26 @@
-
-export class Kep {
+export  default class NagyKep {
     
-    #cim;
+    #cim
+    #src
     #leiras
-    #url
-    constructor(kep, cim, szuloElem) {
+    
+    constructor(cim,src,leiras, szuloElem) {//a sorend a diszeknél nem mindegy ugyan ugy kell legyen mint a tomb.jsben 
         this.#cim = cim;
+        this.#src =src;
         this.#leiras = leiras;
-        this.#url =url;
         this.szuloElem = szuloElem;
-        this.kepMegjelenit();
+        this.megjelenit();
       
     }
 
-    kepMegjelenit() {
+    megjelenit() {
         let html = `
                 <div class="nagy">
                     <h2>${this.#cim}</h2>
-                    <img src="${this.#url}" alt="">
+                    <img src="${this.#src}" alt="">
                     <h3>${this.#leiras}</h3>
                 </div>
         `
-        this.szuloElem.innerHtml =html;
+        this.szuloElem.innerHTML =html;
     }
 }
